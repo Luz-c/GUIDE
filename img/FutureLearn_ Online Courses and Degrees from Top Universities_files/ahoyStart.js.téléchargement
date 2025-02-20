@@ -1,0 +1,17 @@
+// Initialise Ahoy ASAP without waiting for DOM ready
+window.ahoy.configure({ useBeacon: false, startOnReady: false });
+
+window.addEventListener('OptanonLoaded', function () {
+  var PERFORMANCE_COOKIES = 'C0002';
+  if (window.OptanonActiveGroups.indexOf(PERFORMANCE_COOKIES) !== -1) {
+    window.ahoy.start();
+  }
+});
+
+if (window.FutureLearn === undefined) {
+  window.FutureLearn = {};
+}
+
+window.FutureLearn.ahoyAttributes = {
+  application: 'frontend',
+};
