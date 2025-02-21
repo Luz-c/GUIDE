@@ -113,7 +113,7 @@ const fields = [
   {
     name: "Marketing",
     matieres: ["Economie", "Français", "Anglais"],
-    series: ["C", "D", "B"],
+    series: [ "B"],
   },
   {
     name: "Génie Electrique",
