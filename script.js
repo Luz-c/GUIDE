@@ -83,12 +83,12 @@ const fields = [
   {
     name: "commerce international",
     matieres: ["Maths", "Anglais", "Histgeo"],
-    series: ["D", "C"],
+    series: ["D", "C","B"],
   },
   {
     name: "Comptabilité",
     matieres: ["Maths", "Francais", "Eco"],
-    series: ["B"],
+    series: ["B","G2"],
   },
   {
     name: "Genie civil",
@@ -127,23 +127,23 @@ const fields = [
   },
   {
     name: "Statistique Economique et sectorielle",
-    matieres: ["Maths", "Francais"],
+    matieres: ["Maths", "Francais,Anglais"],
     series: ["C", "D"],
   },
   {
     name: "Philosophie",
     matieres: ["Philo", "Francais", "Anglais"],
-    series: ["C", "D", "A1", "A2"],
+    series: [ "A1", "A2"],
   },
   {
     name: "Histoire",
     matieres: ["Histgeo", "Français", "Anglais"],
-    series: ["C", "D", "A1", "A2", "B"],
+    series: [, "A1", "A2", "B"],
   },
   {
     name: "Journalisme",
-    matieres: ["Francais", "Hist-geo"],
-    series: ["C", "D", "A1", "A2", "B"],
+    matieres: ["Francais", "Hist-geo,Anglais"],
+    series: [ "A1", "A2", "B"],
   },
   {
     name: "Administration Générale",
@@ -152,6 +152,11 @@ const fields = [
   },
   {
     name: "Médécine Générale",
+    matieres: ["Maths", "PCT", "SVT"],
+    series: ["C", "D"],
+  },
+  {
+    name: "Pharmacie",
     matieres: ["Maths", "PCT", "SVT"],
     series: ["C", "D"],
   },
