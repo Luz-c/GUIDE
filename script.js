@@ -71,6 +71,7 @@ function updateSubjects() {
       input.max = "20";
       input.step = "0.25";
       input.placeholder = "Entrez votre note";
+      input.className = "ring-1"
 
       subjectsContainer.appendChild(label);
       subjectsContainer.appendChild(input);
@@ -81,7 +82,7 @@ function updateSubjects() {
 const fields = [
   {
     name: "commerce international",
-    matieres: ["Maths", "Anglais", "Hist-Geo"],
+    matieres: ["Maths", "Anglais", "Histgeo"],
     series: ["D", "C"],
   },
   {
@@ -126,27 +127,27 @@ const fields = [
   },
   {
     name: "Statistique Economique et sectorielle",
-    matieres: ["Maths", "culture générale"],
+    matieres: ["Maths", "Francais"],
     series: ["C", "D"],
   },
   {
     name: "Philosophie",
-    matieres: ["Philo", "Français", "Anglais"],
+    matieres: ["Philo", "Francais", "Anglais"],
     series: ["C", "D", "A1", "A2"],
   },
   {
     name: "Histoire",
-    matieres: ["Hist-géo", "Français", "Anglais"],
+    matieres: ["Histgeo", "Français", "Anglais"],
     series: ["C", "D", "A1", "A2", "B"],
   },
   {
     name: "Journalisme",
-    matieres: ["Culture Générale", "Hist-Géo"],
+    matieres: ["Francais", "Hist-geo"],
     series: ["C", "D", "A1", "A2", "B"],
   },
   {
     name: "Administration Générale",
-    matieres: ["Philo", "Français", "Hist-Géo"],
+    matieres: ["Philo", "Francais", "Hist-geo"],
     series: ["C", "D", "A1", "A2", "B"],
   },
   {
@@ -251,7 +252,7 @@ function displayResults(averages) {
   }
 
   // Trier les filières par moyenne décroissante
- const list = averages.sort((a, b) => parseFloat(b.moyenne) - parseFloat(a.moyenne)).slice(0, 3);
+ const list = averages.sort((a, b) => parseFloat(b.moyenne) - parseFloat(a.moyenne)).slice(0, 5);
   
   const resultsList = document.createElement("div");
   resultsList.className = "results-list";
@@ -261,9 +262,9 @@ function displayResults(averages) {
     filiereDiv.className = "filiere-result";
 
     filiereDiv.innerHTML = `
-        <h3>${result.filiere}</h3>
-        <p>Moyenne : ${result.moyenne}</p>
-        <p>Matières prises en compte : ${result.matieres.join(", ")}</p>
+        <h3 class="star">${result.filiere}</h3>
+        <p class="star_1">Moyenne : ${result.moyenne}</p>
+        <p class="star_2" >Matières prises en compte : ${result.matieres.join(", ")}</p>
       `;
 
     resultsList.appendChild(filiereDiv);
