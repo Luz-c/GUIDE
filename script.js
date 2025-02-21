@@ -82,7 +82,7 @@ function updateSubjects() {
 const fields = [
   {
     name: "commerce international",
-    matieres: ["Maths", "Anglais", "Histgeo"],
+    matieres: ["Maths", "Anglais", "histgeo"],
     series: ["D", "C","B"],
   },
   {
@@ -97,7 +97,7 @@ const fields = [
   },
   {
     name: "Sécurité informatique",
-    matieres: ["Maths", "Français", "Anglais"],
+    matieres: ["Maths", "Francais", "Anglais"],
     series: ["C", "D"],
   },
   {
@@ -107,12 +107,12 @@ const fields = [
   },
   {
     name: "Analyse informatique et Programmation",
-    matieres: ["Maths", "Français", "Anglais"],
+    matieres: ["Maths", "Francais", "Anglais"],
     series: ["C", "D"],
   },
   {
     name: "Marketing",
-    matieres: ["Economie", "Français", "Anglais"],
+    matieres: ["Eco", "Francais", "Anglais"],
     series: [ "B"],
   },
   {
@@ -127,7 +127,7 @@ const fields = [
   },
   {
     name: "Statistique Economique et sectorielle",
-    matieres: ["Maths", "Francais,Anglais"],
+    matieres: ["Maths", "Francais", "Anglais"],
     series: ["C", "D"],
   },
   {
@@ -137,17 +137,17 @@ const fields = [
   },
   {
     name: "Histoire",
-    matieres: ["Histgeo", "Français", "Anglais"],
+    matieres: ["histgeo", "Francais", "Anglais"],
     series: [, "A1", "A2", "B"],
   },
   {
     name: "Journalisme",
-    matieres: ["Francais", "Hist-geo,Anglais"],
+    matieres: ["Francais", "histgeo,Anglais"],
     series: [ "A1", "A2", "B"],
   },
   {
     name: "Administration Générale",
-    matieres: ["Philo", "Francais", "Hist-geo"],
+    matieres: ["Philo", "Francais", "histgeo"],
     series: ["C", "D", "A1", "A2", "B"],
   },
   {
@@ -162,12 +162,12 @@ const fields = [
   },
   {
     name: "Droit",
-    matieres: ["Hist-Géo", "Français", "Anglais"],
+    matieres: ["histgeo", "Francais", "Anglais"],
     series: ["C", "D", "A1", "A2", "B"],
   },
   {
     name: "Physique chimie",
-    matieres: ["Maths", "Français", "PCT"],
+    matieres: ["Maths", "Francais", "PCT"],
     series: ["C", "D"],
   },
 ];
@@ -203,13 +203,25 @@ function calculateFieldAverages(userSerie, notes) {
           note = notes.anglais;
           coef = coefficients[userSerie].anglais;
           break;
-        case "hist-geo":
+        case "histgeo":
           note = notes.histgeo;
           coef = coefficients[userSerie].histgeo;
           break;
         case "svt":
           note = notes.svt;
           coef = coefficients[userSerie].svt;
+          break;
+        case "philo":
+          note = notes.philo;
+          coef = coefficients[userSerie].philo;
+          break;
+        case "francais":
+          note = notes.francais;
+          coef = coefficients[userSerie].francais;
+          break;
+        case "eco":
+          note = notes.eco;
+          coef = coefficients[userSerie].eco;
           break;
       }
 
