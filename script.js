@@ -225,8 +225,8 @@ function calculateFieldAverages(userSerie, notes) {
           break;
       }
 
-      sumNoteCoef += note * coef;
-      sumCoef += coef;
+      sumNoteCoef += parseFloat(note) * parseFloat(coef);
+      sumCoef += parseInt(coef);
     });
 
     const average = sumNoteCoef / sumCoef;
