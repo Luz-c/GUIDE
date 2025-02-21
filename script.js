@@ -82,7 +82,7 @@ function updateSubjects() {
 const fields = [
   {
     name: "commerce international",
-    matieres: ["Maths", "Anglais", "histgeo"],
+    matieres: ["Maths", "Anglais", "Histgeo"],
     series: ["D", "C","B"],
   },
   {
@@ -137,17 +137,17 @@ const fields = [
   },
   {
     name: "Histoire",
-    matieres: ["histgeo", "Francais", "Anglais"],
+    matieres: ["Histgeo", "Francais", "Anglais"],
     series: [, "A1", "A2", "B"],
   },
   {
     name: "Journalisme",
-    matieres: ["Francais", "histgeo,Anglais"],
+    matieres: ["Francais", "Histgeo","Anglais"],
     series: [ "A1", "A2", "B"],
   },
   {
     name: "Administration Générale",
-    matieres: ["Philo", "Francais", "histgeo"],
+    matieres: ["Philo", "Francais", "Histgeo"],
     series: ["C", "D", "A1", "A2", "B"],
   },
   {
@@ -162,7 +162,7 @@ const fields = [
   },
   {
     name: "Droit",
-    matieres: ["histgeo", "Francais", "Anglais"],
+    matieres: ["Histgeo", "Francais", "Anglais"],
     series: ["C", "D", "A1", "A2", "B"],
   },
   {
